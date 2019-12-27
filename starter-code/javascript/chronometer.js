@@ -1,6 +1,13 @@
 class Chronometer {
-  constructor() {}
-  // startClick() {}
+  constructor() {
+    this.currentTime = 0;
+    this.intervalId = 0;
+  }
+  startClick() {
+    this.intervalId = setInterval(() => {
+      this.currentTime += 1;
+    }, 1000);
+  }
   // getMinutes() {}
   // getSeconds() {}
   // twoDigitsNumber() {}
